@@ -83,8 +83,11 @@ app.use("/img", imageRoute);
 app.use("/fileupload",fileroute);
 
 
-app.get("/",()=>{
-  console.log("server is up and running")
+app.get("/",(req,res)=>{
+  return res.json({
+    sucess:true,
+    message:"sucessfully deployed"
+  })
 })
 
 app.listen(PORT, () => {

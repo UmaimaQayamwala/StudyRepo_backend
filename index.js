@@ -83,7 +83,9 @@ app.use("/img", imageRoute);
 app.use("/fileupload",fileroute);
 
 
-
+app.get("/",()=>{
+  console.log("server is up and running")
+})
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
